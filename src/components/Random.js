@@ -9,7 +9,7 @@ export class Random extends Component {
         this.fetchAdvice();
     }
     fetchAdvice = () => {
-        axios.get('http://api.adviceslip.com/advice')
+        axios.get('https://api.adviceslip.com/advice')
             .then((response) => {
                 const { advice } = response.data.slip;
                 this.setState({img: 'https://picsum.photos/2400/1200', temp: this.state.temp + 1})
